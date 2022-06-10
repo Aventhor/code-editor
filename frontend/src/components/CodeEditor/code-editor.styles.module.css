@@ -1,0 +1,35 @@
+.highlighting,
+.editing {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 10px;
+  padding: 10px;
+
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+
+  /* overflow: auto;
+  white-space: nowrap; */
+}
+
+.editing,
+.highlighting,
+.highlighting * {
+  font-size: 15pt;
+  font-family: monospace;
+  line-height: 20pt;
+}
+
+.highlighting {
+  z-index: 0;
+}
+
+.editing {
+  resize: none;
+  color: transparent;
+  background: transparent;
+  caret-color: black;
+  z-index: 1;
+}
