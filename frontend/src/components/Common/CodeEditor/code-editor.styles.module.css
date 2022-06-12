@@ -1,11 +1,11 @@
 .highlighting,
-.editing {
+.editor {
   position: absolute;
   top: 0;
   left: 0;
 
-  margin: 10px;
-  padding: 10px;
+  /* margin: 10px;
+  padding: 1em; */
 
   width: calc(100% - 32px);
   height: calc(100% - 32px);
@@ -14,7 +14,19 @@
   white-space: nowrap; */
 }
 
-.editing,
+.editor::before {
+  counter-increment: line;
+  content: counter(line);
+  font-size: 1em;
+  user-select: none;
+  width: 5rem;
+  text-align: right;
+  left: 0;
+
+  position: absolute;
+}
+
+.editor,
 .highlighting,
 .highlighting * {
   font-size: 15pt;
@@ -22,11 +34,17 @@
   line-height: 20pt;
 }
 
+pre {
+  margin: 0;
+}
+
 .highlighting {
+  
+  padding: 0;
   z-index: 0;
 }
 
-.editing {
+.editor {
   resize: none;
   color: transparent;
   background: transparent;
